@@ -1,12 +1,14 @@
 {
-  "name": "reviva-crm-preview",
-  "version": "1.0.0",
+  "name": "revyvas-crm",
+  "version": "0.1.0",
   "private": true,
-  "description": "Preview do SaaS Reviva CRM para clinicas de estetica",
+  "description": "SaaS para clínicas de estética focado em retorno, renovação de pacotes e pós-procedimento via WhatsApp.",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node --check server.js && node --check src/app.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }

@@ -849,6 +849,7 @@ function showLoginGate(errorMessage = "") {
       <label><span>Email</span><input name="email" type="email" placeholder="email@clinica.com.br" required /></label>
       <label><span>Senha</span><input name="password" type="password" placeholder="Digite sua senha" required /></label>
       <button class="primary-button deep" type="submit">Entrar</button>
+      <small class="login-access-note">Acesso exclusivo para clínicas cadastradas.</small>
       <small id="loginError">${errorMessage}</small>
     </form>
   `;

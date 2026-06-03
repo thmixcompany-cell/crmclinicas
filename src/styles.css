@@ -5915,3 +5915,28 @@ textarea:focus {
     font-size: 2rem !important;
   }
 }
+
+
+/* --- Microajustes finais do login --- */
+.login-card input:focus {
+  border-color: rgba(196, 71, 116, 0.72) !important;
+  box-shadow: 0 0 0 4px rgba(247, 221, 227, 0.72) !important;
+  outline: none !important;
+}
+
+.login-access-note {
+  display: block;
+  margin-top: 2px;
+  color: #7b6f79;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.login-card #loginError:not(:empty) {
+  display: block;
+  margin-top: 4px;
+  color: #a6355e;
+  font-weight: 700;
+  text-align: center;
+}

@@ -88,7 +88,7 @@ let patients = loadState("revivaV2Patients", [
     name: "Juliana Prado",
     initials: "JP",
     type: "renovacao",
-    tag: "Risco churn",
+    tag: "Risco de perda",
     urgency: "alert",
     procedure: "Limpeza + peelings",
     next: "Contato humano antes da oferta",
@@ -97,7 +97,7 @@ let patients = loadState("revivaV2Patients", [
     history:
       "Não respondeu às duas últimas mensagens automatizadas. Preferiu atendimento consultivo na primeira compra, então o melhor caminho é entender resultado antes de vender.",
     message:
-      "Oi, Juliana! Aqui é da Lumina. Notei que não conseguimos nos falar nos últimos dias e queria entender como sua pele ficou depois do último protocolo. Posso te ajudar a ajustar o plano antes de pensarmos na próxima sessão.",
+      "Oi, Juliana! Aqui é da sua clínica. Notei que não conseguimos nos falar nos últimos dias e queria entender como sua pele ficou depois do último protocolo. Posso te ajudar a ajustar o plano antes de pensarmos na próxima sessão.",
     risk: "Alto",
     value: "R$ 1.650",
     sla: "40 min",
@@ -296,7 +296,7 @@ let crmProfiles = loadState("revivaV2CrmProfiles", [
     phone: "+55 65 98440-7712",
     ltv: "R$ 9.430",
     package: "Peelings - pausado",
-    segment: "Risco de churn",
+    segment: "Risco de perda",
     status: "Sem resposta",
     timeline: ["30/04 - Limpeza + peeling", "10/05 - Sem resposta", "24/05 - Acionar humano"],
     conversation: ["Sistema: Duas mensagens ignoradas.", "Clínica: Vamos entender resultado antes de ofertar.", "Sistema: Prioridade concierge."],
@@ -446,7 +446,7 @@ let carePackages = loadState("revivaV3Packages", [
 ]);
 
 let clinicSettings = loadState("revivaV1ClinicSettings", {
-  name: "Clínica Lumina",
+  name: "Sua clínica",
   whatsapp: "+55 65 99800-2020",
   hours: "Segunda a sexta, 08h às 19h",
   policy: "Retorno em até 15 dias para toxina, D+2/D+7 para procedimentos ablativos e D+30 para bioestimuladores.",
@@ -842,7 +842,7 @@ function showLoginGate(errorMessage = "") {
   gate.id = "loginGate";
   gate.innerHTML = `
     <form class="login-card" id="loginForm">
-      <div class="brand-lockup login-logo"><img src="assets/revyvas-monogram-real.png" alt="Revyvas CRM" /></div>
+      <div class="brand-lockup login-logo"><img src="assets/revyvas-logo-real.png" alt="Revyvas CRM" /></div>
       <p class="eyebrow">Revyvas CRM</p>
       <h2>Entrar na clínica</h2>
       <p>Acesse o painel de retenção, pós-procedimento e renovação de pacotes da sua clínica.</p>
@@ -1738,7 +1738,7 @@ function handleModalSubmit(event) {
       status: "Novo paciente",
       automation: "Aguardando protocolo",
       history: "Paciente recém-cadastrado para acompanhamento da equipe.",
-      message: `Oi, ${values.name.split(" ")[0]}! Aqui é da Clínica Lumina. Vamos acompanhar seu cuidado por aqui com orientações e lembretes importantes.`,
+      message: `Oi, ${values.name.split(" ")[0]}! Aqui é da sua clínica. Vamos acompanhar seu cuidado por aqui com orientações e lembretes importantes.`,
       risk: "Baixo",
       value: "R$ 0",
       sla: "24h",
@@ -2675,7 +2675,7 @@ function polishStaticInterface() {
   });
 
   setText(".concierge-card .panel-kicker", "Opera\u00e7\u00e3o assistida");
-  setText(".brand span", "Cl\u00ednica Lumina");
+  setText(".brand span", "Sua clínica");
   setText("#syncStatus", "Preparando opera\u00e7\u00e3o");
   setText("#detailAutomation", "Aguardando sele\u00e7\u00e3o");
   setText(".automation-strip strong", "Rotina de contato");
@@ -2724,7 +2724,7 @@ function polishStaticInterface() {
       ".metrics-hero",
       "Receita e reten\u00e7\u00e3o",
       "O que voltou para agenda, pacote e faturamento",
-      "Acompanhe receita recuperada, renova\u00e7\u00f5es previstas, retornos confirmados, respostas por WhatsApp e risco de churn por procedimento.",
+      "Acompanhe receita recuperada, renova\u00e7\u00f5es previstas, retornos confirmados, respostas por WhatsApp e risco de perda por procedimento.",
     );
   } else {
     setText(".topbar h1", "Painel CRM");

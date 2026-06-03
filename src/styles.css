@@ -5869,3 +5869,49 @@ textarea:focus {
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+
+
+/* --- Hotfix online: login sem rolagem e logo proporcional --- */
+.login-gate {
+  min-height: 100vh;
+  padding: 24px 16px;
+  overflow: auto;
+}
+
+.login-card {
+  width: min(430px, calc(100vw - 32px));
+  max-height: none !important;
+  overflow: visible !important;
+  padding: clamp(24px, 4vw, 34px) !important;
+}
+
+.login-card .brand-lockup.login-logo {
+  justify-content: flex-start !important;
+  margin-bottom: 16px !important;
+}
+
+.login-card .brand-lockup.login-logo img {
+  width: min(180px, 58%) !important;
+  max-height: 64px !important;
+  object-fit: contain !important;
+}
+
+.login-card h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem) !important;
+  line-height: 1.02 !important;
+}
+
+@media (max-height: 720px) {
+  .login-card {
+    padding: 22px !important;
+  }
+
+  .login-card .brand-lockup.login-logo img {
+    width: 150px !important;
+    max-height: 54px !important;
+  }
+
+  .login-card h2 {
+    font-size: 2rem !important;
+  }
+}
